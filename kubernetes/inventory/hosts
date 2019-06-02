@@ -1,0 +1,11 @@
+[masters]
+master ansible_host="{{ lookup('env', 'KUBE_MASTER_HOST1') }}" 
+
+[masters:vars]
+ansible_user=ubuntu
+ansible_connection=ssh
+ansible_ssh_private_key_file="{{ lookup('env', 'KUBE_SSH_KEY') }}"
+
+#[workers]
+#worker1 ansible_host=1.1.1.1
+#worker2 ansible_host=2.2.2.2

@@ -1,0 +1,5 @@
+pod_network_cidr: 192.168.0.0/16
+
+network_cidr_files:
+  - https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/rbac-kdd.yaml
+  - https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
