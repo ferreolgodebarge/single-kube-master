@@ -1,0 +1,9 @@
+---
+# kubeadm join cluster with token
+
+- name: "Join cluster"
+  shell: "{{ hostvars['master1'].join_command }} >> node_joined.txt"
+  become: yes
+  args:
+    chdir: $HOME
+    creates: node_joined.txt

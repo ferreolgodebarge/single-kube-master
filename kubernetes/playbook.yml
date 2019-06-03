@@ -1,6 +1,0 @@
----
-- hosts: masters
-  roles:
-    - dependencies
-    - init
-

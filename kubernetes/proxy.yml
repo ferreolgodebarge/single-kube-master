@@ -1,0 +1,10 @@
+---
+- hosts: masters
+  roles:
+    - workers/token
+
+- hosts: proxys
+  roles:
+    - workers/dependencies
+    - workers/join
+
