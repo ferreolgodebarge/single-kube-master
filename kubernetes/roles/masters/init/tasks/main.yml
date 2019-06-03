@@ -2,7 +2,7 @@
 # kubeadm init and instantiate network overlay
 
 - name: "Init kubernetes single master"
-  shell: "kubeadm init --pod-network-cidr={{ pod_network_cidr }} --apiserver-cert-extra-sans={{ ansible_host }} >> kubeadm_init.txt"
+  shell: "kubeadm init --node-name {{ inventory_hostname }} --pod-network-cidr={{ pod_network_cidr }} --apiserver-cert-extra-sans={{ ansible_host }} >> kubeadm_init.txt"
   become: yes
   args:
     chdir: $HOME

@@ -1,4 +1,5 @@
 ---
+
 - hosts: masters
   roles:
     - workers/token
@@ -7,4 +8,8 @@
   roles:
     - workers/dependencies
     - workers/join
+
+- hosts: masters 
+  roles:
+    - proxys/proxy
 

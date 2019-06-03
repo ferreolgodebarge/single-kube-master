@@ -1,0 +1,5 @@
+---
+
+- name: "Dedicate the node to proxy tasks"
+  shell: "kubectl taint node {{ item }} type=proxy-node:NoSchedule"
+  with_items: "{{ groups['proxys'] }}"
